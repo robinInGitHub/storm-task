@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="com.cdeledu.storm.chapter">
+	<select id="getAllChapter" resultClass="java.util.HashMap" >
+		SELECT ch.chapterID FROM qz_CHAPTER CH (NOLOCK)
+		INNER JOIN QZ_COURSE CO (NOLOCK) ON CH.courseID=CO.courseID
+ 		WHERE co.status=1
+	</select>
+</sqlMap>

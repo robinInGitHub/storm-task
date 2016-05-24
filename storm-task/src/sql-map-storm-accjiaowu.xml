@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-config-2.dtd" >
+<sqlMapConfig>
+
+	<settings useStatementNamespaces="true" cacheModelsEnabled="true"/>
+	<transactionManager type="JDBC">
+		<dataSource type="SIMPLE">
+			<property name="JDBC.Driver" value="${db.driver}" />
+			<property name="JDBC.ConnectionURL" value="${db.accjiaowu.url}" />
+			<property name="JDBC.Username" value="${db.accjiaowu.user}" />
+			<property name="JDBC.Password" value="${db.accjiaowu.password}" />
+			<!-- <property name="maxActive" value="50"/>
+			<property name="maxWait" value="3000"/>
+			<property name="validationQuery" value="SELECT 1"/>
+			<property name="testWhileIdle" value="true"/>
+			<property name="timeBetweenEvictionRunsMillis" value="600000"/>
+			<property name="numTestsPerEvictionRun" value="10"/>
+			<property name="minEvictableIdleTimeMillis" value="720000"/> -->
+		</dataSource> 
+	</transactionManager>
+	
+	<sqlMap resource="com/cdeledu/storm/sql/chapter.xml"/>
+	<sqlMap resource="com/cdeledu/storm/sql/course.xml"/>
+	
+</sqlMapConfig>
