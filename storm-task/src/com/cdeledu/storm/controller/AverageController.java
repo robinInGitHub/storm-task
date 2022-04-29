@@ -18,7 +18,7 @@ public class AverageController {
 	private AverageService averageService;
 	private ChapterService chapterService;
 	private CourseService courseService;
-	
+	// 章节下统计数据
 	public void chapterAVG(){
 		logger.info("章节下统计数据开始！");
 		averageService = new AverageServiceImpl();
@@ -31,7 +31,7 @@ public class AverageController {
 		}
 		logger.info("章节下统计数据结束！");
 	}
-	
+	// 课程下统计数据
 	public void courseAVG(){
 		logger.info("课程下统计数据开始！");
 		averageService = new AverageServiceImpl();
